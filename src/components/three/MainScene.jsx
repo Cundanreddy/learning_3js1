@@ -24,14 +24,25 @@ export function MainScene(){
         })
         timeline
             .to(can1Ref.current.position,{
-                x:0.5,
+                x:0.2,
                 y:0,
-                z:0,
+                z:1,
             })
             .to(can1Ref.current.position,{
                 x:0,
                 y:0,
                 z:0,
+            })
+            .to(can1Ref.current.rotation,{
+                x: Math.PI/2,
+                
+            }, 0)
+            // .to(can1Ref.current.rotation,{
+            //     x: 0
+                
+            // }, 0)
+            .to(can1SpinRef.current.rotation,{
+                y:Math.PI
             })
     },[])
 
